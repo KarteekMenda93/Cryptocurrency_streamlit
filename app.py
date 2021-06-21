@@ -1,3 +1,5 @@
+### Importing Packages ###
+##########################
 import yfinance as yf
 import streamlit as st
 import pandas as pd
@@ -42,6 +44,8 @@ value_selector = st.sidebar.selectbox(
     "Value Selector", ("Open", "High", "Low", "Close", "Volume")
 )
 
+### Visualize the plot of the crypto ###
+########################################
 if st.sidebar.button("Generate"):
     crypto_hist = data_crypto.history(
         start=start_date, end=end_date, interval=data_interval
